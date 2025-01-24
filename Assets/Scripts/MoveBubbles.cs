@@ -1,0 +1,102 @@
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler
+{
+    private Vector3 originalPos;
+    private Canvas canvas;
+    private GraphicRaycaster raycaster;
+    private EventSystem eventSystem;
+    private bool droppedInside = false;
+
+    void Start()
+    {
+        originalPos = transform.position;
+        canvas = GetComponentInParent<Canvas>();
+        raycaster = canvas.GetComponent<GraphicRaycaster>();
+        eventSystem = EventSystem.current;
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        if (!droppedInside) 
+        {
+            Vector2 localPoint;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                canvas.transform as RectTransform,
+                eventData.position,
+                canvas.worldCamera,
+                out localPoint
+            );
+            transform.position = canvas.transform.TransformPoint(localPoint);
+        }
+    }
+
+    public void OnDrop(PointerEventData eventData)
+    {
+        if (IsFullyInsideManga())
+        {
+            Debug.Log("El objeto está dentro");
+            droppedInside = true;
+        }
+        else
+        {
+            Debug.Log("El objeto está fuera");
+            transform.position = originalPos;
+        }
+    }
+
+    private bool IsFullyInsideManga()
+    {
+        PointerEventData pointerData = new PointerEventData(eventSystem)
+        {
+            position = Input.mousePosition
+        };
+
+        var results = new System.Collections.Generic.List<RaycastResult>();
+        raycaster.Raycast(pointerData, results);
+
+        foreach (var result in results)
+        {
+            if (result.gameObject.CompareTag("Manga"))
+            {
+                RectTransform mangaRect = result.gameObject.GetComponent<RectTransform>();
+                RectTransform bubbleRect = GetComponent<RectTransform>();
+
+                if (IsRectTransformFullyInside(bubbleRect, mangaRect))
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    private bool IsRectTransformFullyInside(RectTransform inner, RectTransform outer)
+    {
+        Vector3[] innerCorners = new Vector3[4];
+        inner.GetWorldCorners(innerCorners);
+
+        Vector3[] outerCorners = new Vector3[4];
+        outer.GetWorldCorners(outerCorners);
+
+        foreach (var corner in innerCorners)
+        {
+            if (!IsPointInsideRect(corner, outerCorners))
+            {
+                return false; 
+            }
+        }
+
+        return true;
+    }
+
+    private bool IsPointInsideRect(Vector3 point, Vector3[] rectCorners)
+    {
+        return point.x >= rectCorners[0].x && point.x <= rectCorners[2].x &&
+               point.y >= rectCorners[0].y && point.y <= rectCorners[1].y;
+    }
+}
