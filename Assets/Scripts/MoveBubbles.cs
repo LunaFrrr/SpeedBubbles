@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler
+public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
     private Vector3 originalPos;
     private Canvas canvas;
@@ -19,8 +19,19 @@ public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler
         eventSystem = EventSystem.current;
     }
 
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        transform.localScale = Vector3.one * 2;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        transform.localScale = Vector3.one;
+    }
+
     public void OnDrag(PointerEventData eventData)
     {
+        transform.localScale = Vector3.one;
         if (!droppedInside) 
         {
             Vector2 localPoint;
