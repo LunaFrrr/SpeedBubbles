@@ -12,7 +12,7 @@ public class StickBubbles : MonoBehaviour
     public TextMeshProUGUI timer;
     public Sprite[] pages = new Sprite[3];
     public GameObject manga;
-
+    public bool isDragging = false;
 
     private float seconds;
 
@@ -40,6 +40,7 @@ public class StickBubbles : MonoBehaviour
         if (nPages == 0)
         {
             SelectRandomPages();
+            //SelectRandomBubbles();
         }
 
         manga.GetComponent<Image>().sprite = randomPages[nPages];
@@ -71,18 +72,18 @@ public class StickBubbles : MonoBehaviour
 
     private void SelectRandomPages()
     {
-        HashSet<int> usedIndexes = new HashSet<int>(); // Conjunto para almacenar índices usados
+        HashSet<int> usedIndexes = new HashSet<int>();
 
         for (int i = 0; i < randomPages.Length; i++)
         {
             int nRandom;
             do
             {
-                nRandom = Random.Range(0, randomPages.Length); // Generar un índice aleatorio
-            } while (usedIndexes.Contains(nRandom)); // Verificar si el índice ya fue usado
+                nRandom = Random.Range(0, randomPages.Length); 
+            } while (usedIndexes.Contains(nRandom));
 
-            usedIndexes.Add(nRandom); // Agregar el índice al conjunto
-            randomPages[i] = pages[nRandom]; // Asignar la página correspondiente
+            usedIndexes.Add(nRandom); 
+            randomPages[i] = pages[nRandom];
         }
 
         manga.GetComponent<Image>().sprite = randomPages[nPages];

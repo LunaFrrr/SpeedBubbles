@@ -11,6 +11,8 @@ public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler, IPointerEn
     private EventSystem eventSystem;
     private bool droppedInside = false;
 
+    public StickBubbles StickBubbles;
+
     void Start()
     {
         originalPos = transform.position;
@@ -21,7 +23,10 @@ public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler, IPointerEn
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        transform.localScale = Vector3.one * 2;
+        if (!droppedInside && !StickBubbles.isDragging)
+        {
+            transform.localScale = Vector3.one * 2;
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -31,6 +36,7 @@ public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler, IPointerEn
 
     public void OnDrag(PointerEventData eventData)
     {
+        StickBubbles.isDragging = true;
         transform.localScale = Vector3.one;
         if (!droppedInside) 
         {
@@ -47,6 +53,7 @@ public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler, IPointerEn
 
     public void OnDrop(PointerEventData eventData)
     {
+        StickBubbles.isDragging = false;
         if (IsFullyInsideManga())
         {
             Debug.Log("El objeto está dentro");
