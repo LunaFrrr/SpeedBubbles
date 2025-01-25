@@ -29,6 +29,8 @@ public class StickBubbles : MonoBehaviour
     public static List<GameObject> remainingBubbles = new List<GameObject>();
     public static List<GameObject> collidedObjects = new List<GameObject>();
 
+    public AudioSource clock;
+
 
     private void Awake()
     {
@@ -43,7 +45,7 @@ public class StickBubbles : MonoBehaviour
         pagesText.text = $"{nPages + 1}/3";
         if(timerText != null)
         {
-            seconds = 60;
+            seconds = 16;
             timerText.text = $"0:{seconds}";
             manga.GetComponent<Image>().sprite = randomPages[nPages];
         }
@@ -58,6 +60,14 @@ public class StickBubbles : MonoBehaviour
             {
                 HideCollidedObjects();
                 NextPage();
+            }
+            if (seconds <= 10 && !clock.isPlaying)
+            {
+                clock.Play();
+            }
+            if (seconds > 10 && clock.isPlaying)
+            {
+                clock.Pause();
             }
         }
     }
