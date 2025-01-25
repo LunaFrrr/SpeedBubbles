@@ -74,6 +74,7 @@ public class StickBubbles : MonoBehaviour
 
     private void Countdown()
     {
+
         if (seconds > 0)
         {
             seconds -= Time.deltaTime;
@@ -82,7 +83,16 @@ public class StickBubbles : MonoBehaviour
         {
             seconds = 0;
         }
-        int textSeconds = Mathf.FloorToInt(seconds % 60);
+
+        string textSeconds;
+        if (seconds >= 10)
+        {
+            textSeconds = Mathf.FloorToInt(seconds % 60).ToString();
+        }
+        else
+        {
+            textSeconds = "0" +  Mathf.FloorToInt(seconds % 60).ToString();
+        }
         timerText.text = $"0:{textSeconds}";
     }
 
