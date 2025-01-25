@@ -58,6 +58,15 @@ public class DisplayMangas : MonoBehaviour
         }
     }
 
+    public void RemoveBubbles()
+    {
+        GameObject[] allChildren = new GameObject[bubbleContainer.transform.childCount];
+        for (int i = 0;i < allChildren.Length; i++)
+        {
+            Destroy(bubbleContainer.transform.GetChild(i).gameObject);
+        }
+    }
+
     public void NextPage()
     {
         
@@ -69,6 +78,7 @@ public class DisplayMangas : MonoBehaviour
         {
             nPage++;
             page.GetComponent<Image>().sprite = StickBubbles.randomPages[nPage];
+            RemoveBubbles();
             switch (nPage)
             {
                 case 0:
@@ -93,7 +103,7 @@ public class DisplayMangas : MonoBehaviour
     {
         nPage--;
         page.GetComponent<Image>().sprite = StickBubbles.randomPages[nPage];
-
+        RemoveBubbles();
         switch (nPage)
         {
             case 0:
