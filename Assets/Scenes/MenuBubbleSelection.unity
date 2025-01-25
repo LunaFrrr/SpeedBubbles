@@ -197,11 +197,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4415287212820732407, guid: cd621f4b149ba9d4b8a4b0ff5d363a1b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 117
+      value: 274
       objectReference: {fileID: 0}
     - target: {fileID: 4415287212820732407, guid: cd621f4b149ba9d4b8a4b0ff5d363a1b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -169
+      value: -236
       objectReference: {fileID: 0}
     - target: {fileID: 4415287212820732407, guid: cd621f4b149ba9d4b8a4b0ff5d363a1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -310,11 +310,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4415287212820732407, guid: cd621f4b149ba9d4b8a4b0ff5d363a1b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -465
+      value: -584
       objectReference: {fileID: 0}
     - target: {fileID: 4415287212820732407, guid: cd621f4b149ba9d4b8a4b0ff5d363a1b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 216
+      value: 168
       objectReference: {fileID: 0}
     - target: {fileID: 4415287212820732407, guid: cd621f4b149ba9d4b8a4b0ff5d363a1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -412,11 +412,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4415287212820732407, guid: cd621f4b149ba9d4b8a4b0ff5d363a1b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 351
+      value: 598
       objectReference: {fileID: 0}
     - target: {fileID: 4415287212820732407, guid: cd621f4b149ba9d4b8a4b0ff5d363a1b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 219
+      value: 161
       objectReference: {fileID: 0}
     - target: {fileID: 4415287212820732407, guid: cd621f4b149ba9d4b8a4b0ff5d363a1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -748,11 +748,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4415287212820732407, guid: cd621f4b149ba9d4b8a4b0ff5d363a1b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -390
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 4415287212820732407, guid: cd621f4b149ba9d4b8a4b0ff5d363a1b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -178
+      value: -252
       objectReference: {fileID: 0}
     - target: {fileID: 4415287212820732407, guid: cd621f4b149ba9d4b8a4b0ff5d363a1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -911,15 +911,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 1925249662001975646, guid: ad8da6ad5ddd5284ab2469cf87245d09, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
