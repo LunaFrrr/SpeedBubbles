@@ -33,6 +33,8 @@ public class StickBubbles : MonoBehaviour
     public static List<GameObject> remainingBubbles = new List<GameObject>();
     public static List<GameObject> collidedObjects = new List<GameObject>();
 
+    public string folderPath = "Sprites"; // Ruta dentro de la carpeta Resources
+    private List<Sprite> selectedSprites = new List<Sprite>();
 
     private void Awake()
     {
@@ -115,11 +117,11 @@ public class StickBubbles : MonoBehaviour
 
     private void AddImageBubbles()
     {
-        for (int i = 0; i < SelectStack.randomBubbles.Count; i++)
+        for (int i = 0; i < SelectStack.selectedSprites.Count; i++)
         {
             if (i < bubbles.Length)
             {
-                bubbles[i].GetComponent<Image>().sprite = SelectStack.randomBubbles[i];
+                bubbles[i].GetComponent<Image>().sprite = SelectStack.selectedSprites[i];
             }
         }
     }

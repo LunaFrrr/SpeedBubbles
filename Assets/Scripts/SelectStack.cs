@@ -2,47 +2,59 @@ using UnityEngine;
 using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class SelectStack : MonoBehaviour
 {
-    public Sprite[] allBubbles = new Sprite[8];
-    public static List<Sprite> randomBubbles = new List<Sprite>();
-    private int numBubbles = 8;
+    public static List<Sprite> selectedSprites = new List<Sprite>();
+    private int numBubbles = 15;
+    public string label = "default"; 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
+        Addressables.LoadAssetsAsync<Sprite>(label, null).Completed += OnSpritesLoaded;
         DontDestroyOnLoad(this);
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void OnSpritesLoaded(AsyncOperationHandle<IList<Sprite>> handle)
     {
-        
+        if (handle.Status == AsyncOperationStatus.Succeeded)
+        {
+            Debug.Log("Se cargaron " + handle.Result.Count + " sprites.");
+            selectedSprites = GetRandomSprites(handle.Result, numBubbles);
+
+            foreach (var sprite in selectedSprites)
+            {
+                Debug.Log("Sprite seleccionado: " + sprite.name);
+            }
+        }
+        else
+        {
+            Debug.LogError("Error al cargar sprites.");
+        }
     }
 
-    private void GenerateRandomStack() 
+    private List<Sprite> GetRandomSprites(IList<Sprite> sprites, int count)
     {
-        HashSet<int> usedIndexes = new HashSet<int>();
+        List<Sprite> randomSprites = new List<Sprite>();
+        HashSet<int> usedIndices = new HashSet<int>();
 
-        for (int i = 0; i < numBubbles; i++)
+        while (randomSprites.Count < count && randomSprites.Count < sprites.Count)
         {
-            int nRandom;
-            do
+            int index = Random.Range(0, sprites.Count);
+            if (usedIndices.Add(index)) // Solo agrega índices no repetidos
             {
-                nRandom = Random.Range(0, numBubbles);
-            } while (usedIndexes.Contains(nRandom));
-
-            usedIndexes.Add(nRandom);
-            randomBubbles.Add(allBubbles[nRandom]);
+                randomSprites.Add(sprites[index]);
+            }
         }
 
+        return randomSprites;
     }
 
     public void NextScene()
     {
-        GenerateRandomStack();
         SceneManager.LoadScene("StickBubblesManga");
     }
 }

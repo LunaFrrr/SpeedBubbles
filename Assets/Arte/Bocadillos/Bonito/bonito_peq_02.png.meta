@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a9e9b185cce5ae04a9a5472cf50c2bcc
+guid: 41f8406fdf0e96842ac146479ca68484
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 453556384925060132
-    second: narrador_grande_01_0
+      213: 3506190211158795907
+    second: bonito_peq_02_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: narrador_grande_01_0
+      name: bonito_peq_02_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 24
-        width: 205
-        height: 263
+        x: 1
+        y: 29
+        width: 247
+        height: 252
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42c8119012b5b4600800000000000000
-      internalID: 453556384925060132
+      spriteID: 3866213ab6d78a030800000000000000
+      internalID: 3506190211158795907
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      narrador_grande_01_0: 453556384925060132
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
