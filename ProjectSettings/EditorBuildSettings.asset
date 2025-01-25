@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShowMangas.unity
     guid: 32fa1351d565a304e9aa182e9c5a6006
+  - enabled: 1
+    path: Assets/Scenes/IniAnimatic.unity
+    guid: 54fcff453d06e97429bf1dab32ff1cb3
+  - enabled: 1
+    path: Assets/Scenes/EndAnimatic.unity
+    guid: ee869d2296e930746844653fedbfb302
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

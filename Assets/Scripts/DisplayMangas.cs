@@ -63,7 +63,7 @@ public class DisplayMangas : MonoBehaviour
         
         if (nPage > 1)
         {
-            //SceneManager.LoadScene("ShowMangas");
+            SceneManager.LoadScene("EndAnimatic");
         }
         else
         {
