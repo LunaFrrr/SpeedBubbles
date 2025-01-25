@@ -21,6 +21,11 @@ public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler, IPointerEn
         eventSystem = EventSystem.current;
     }
 
+    void Update()
+    {
+
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (!droppedInside && !StickBubbles.isDragging)
@@ -56,17 +61,20 @@ public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler, IPointerEn
         StickBubbles.isDragging = false;
         if (IsFullyInsideManga())
         {
-            Debug.Log("El objeto está dentro");
+            if (!StickBubbles.collidedObjects.Contains(gameObject))
+            {
+                StickBubbles.collidedObjects.Add(gameObject);
+            }
             droppedInside = true;
         }
         else
         {
-            Debug.Log("El objeto está fuera");
             transform.position = originalPos;
         }
     }
 
-    private bool IsFullyInsideManga()
+
+    public bool IsFullyInsideManga()
     {
         PointerEventData pointerData = new PointerEventData(eventSystem)
         {

@@ -1,57 +1,49 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.XR;
-using System.Collections.Generic;
 
 public class StickBubbles : MonoBehaviour
 {
     public TextMeshProUGUI timer;
+    public Sprite[] bubbleSprites = new Sprite[14];
     public Sprite[] pages = new Sprite[3];
     public GameObject manga;
-    public bool isDragging = false;
-
-    private float seconds;
+    public GameObject bubbleContainer;
+    public static GameObject[] bubbles;
+    public static bool isDragging = false;
+    public float seconds;
 
     public static int nPages = 0;
     public int[] lastRand;
     public static Sprite[] randomPages = new Sprite[3];
-    public static GameObject[] bubbles = new GameObject[15];
+
+    public static List<GameObject> remainingBubbles = new List<GameObject>();
+    public static List<GameObject> collidedObjects = new List<GameObject>();
 
 
     private void Awake()
     {
-        
+
+        InitializeBubbles();  
+     
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        lastRand = new int[randomPages.Length];
-
-
         seconds = 15;
         timer.text = $"{seconds}";
-        Debug.Log(nPages);
-
-        if (nPages == 0)
-        {
-            SelectRandomPages();
-            //SelectRandomBubbles();
-        }
-
         manga.GetComponent<Image>().sprite = randomPages[nPages];
     }
 
-    // Update is called once per frame
     void Update()
     {
         Countdown();
         if (seconds == 0)
         {
+            HideCollidedObjects();
             NextPage();
         }
     }
@@ -70,6 +62,20 @@ public class StickBubbles : MonoBehaviour
         timer.text = $"{textSeconds}";
     }
 
+    private void InitializeBubbles()
+    {
+        bubbles = new GameObject[bubbleContainer.transform.childCount];
+        for (int i = 0; i < bubbleContainer.transform.childCount; i++)
+        {
+            bubbles[i] = bubbleContainer.transform.GetChild(i).gameObject;
+            remainingBubbles.Add(bubbles[i]);
+        }
+
+        lastRand = new int[randomPages.Length];
+        AddImageBubbles();
+        SelectRandomPages();
+    }
+
     private void SelectRandomPages()
     {
         HashSet<int> usedIndexes = new HashSet<int>();
@@ -79,29 +85,53 @@ public class StickBubbles : MonoBehaviour
             int nRandom;
             do
             {
-                nRandom = Random.Range(0, randomPages.Length); 
+                nRandom = Random.Range(0, randomPages.Length);
             } while (usedIndexes.Contains(nRandom));
 
-            usedIndexes.Add(nRandom); 
+            usedIndexes.Add(nRandom);
             randomPages[i] = pages[nRandom];
         }
 
         manga.GetComponent<Image>().sprite = randomPages[nPages];
     }
 
+    private void AddImageBubbles()
+    {
+        for (int i = 0; i < bubbleSprites.Length; i++)
+        {
+            if (i < bubbles.Length)
+            {
+                bubbles[i].GetComponent<Image>().sprite = bubbleSprites[i];
+            }
+        }
+    }
+
     public void NextPage()
     {
         nPages++;
-        if(nPages < 3)
+        if (nPages < 3)
         {
-            SceneManager.LoadScene("StickBubblesManga");
-
+            manga.GetComponent<Image>().sprite = randomPages[nPages];
+            for (int i = 0; i < bubbles.Length; i++)
+            {
+                if (collidedObjects.Contains(bubbles[i]))
+                {
+                    bubbles[i].SetActive(false);
+                }
+            }
         }
-
         else
         {
-
+            //SceneManager.LoadScene("StickBubblesManga");
         }
-        
+    }
+
+    private void HideCollidedObjects()
+    {
+        foreach (var obj in collidedObjects)
+        {
+            obj.SetActive(false);
+        }
+        collidedObjects.Clear();
     }
 }
