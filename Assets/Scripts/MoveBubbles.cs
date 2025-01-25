@@ -46,6 +46,7 @@ public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler, IPointerEn
         transform.localScale = Vector3.one;
         if (!droppedInside) 
         {
+            gameObject.GetComponent<RectTransform>().SetAsLastSibling();
             Vector2 localPoint;
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 canvas.transform as RectTransform,
