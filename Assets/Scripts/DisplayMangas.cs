@@ -11,6 +11,7 @@ public class DisplayMangas : MonoBehaviour
     public GameObject buttonViewNext;
     public GameObject buttonViewLast;
     public GameObject page;
+    public GameObject sounds;
 
     public GameObject bubbleContainer;
 
@@ -29,12 +30,10 @@ public class DisplayMangas : MonoBehaviour
         if (nPage == 0)
         {
             buttonViewLast.SetActive(false);
-            buttonViewLast.GetComponent<Button>().enabled = false;
         }
         else
         {
             buttonViewLast.SetActive(true);
-            buttonViewLast.GetComponent<Button>().enabled = true;
         }
     }
 
@@ -74,6 +73,7 @@ public class DisplayMangas : MonoBehaviour
         }
         else
         {
+            sounds.GetComponent<AudioSource>().Play();
             nPage++;
             page.GetComponent<Image>().sprite = StickBubbles.randomPages[nPage];
             RemoveBubbles();
@@ -99,6 +99,7 @@ public class DisplayMangas : MonoBehaviour
 
     public void LastPage()
     {
+        sounds.GetComponent<AudioSource>().Play();
         nPage--;
         page.GetComponent<Image>().sprite = StickBubbles.randomPages[nPage];
         RemoveBubbles();
