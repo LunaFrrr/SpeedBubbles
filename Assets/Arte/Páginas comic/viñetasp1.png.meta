@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "vi\xF1etasp1_0": 7327075648624199729
+      "vi\xF1etasp1_1": -8184640835331264093
+      "vi\xF1etasp1_2": -664905914990320289
+      "vi\xF1etasp1_3": -2529751838446368163
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
