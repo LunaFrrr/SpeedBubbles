@@ -1,78 +1,114 @@
-using System.Drawing;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
-using UnityEngine.UIElements;
-using System;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;  // Asegúrate de tener esto para trabajar con los UI Buttons
 
 public class DisplayMangas : MonoBehaviour
 {
-    public Sprite buttonSprite;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    int nPage = 0;
 
-    GameObject FindInChildren(GameObject parent, string name)
+    public GameObject buttonViewNext;
+    public GameObject buttonViewLast;
+    public GameObject page;
+
+
+    public Sprite[] bubbleSprites = new Sprite[14];
+    public GameObject bubbleContainer;
+
+    private void Awake()
     {
-        foreach (Transform child in parent.transform)
-        {
-            if (child.name == name)
-            {
-                return child.gameObject;
-            }
-
-            GameObject result = FindInChildren(child.gameObject, name);
-            if (result != null)
-            {
-                return result;
-            }
-        }
-
-        return null;
+        page.GetComponent<Image>().sprite = StickBubbles.randomPages[nPage];
     }
 
     void Start()
     {
-        GameObject ui = GameObject.Find("UI");
-
-        GameObject panel = FindInChildren(ui, "Panel");
-        GameObject lastButton = FindInChildren(ui, "Button");
-        GameObject timer = FindInChildren(ui, "TimerText (TMP)");
-        Destroy(lastButton);
-        Destroy(timer);
-
-        DestroyRemainingBubbles();
-        Vector3 position = new Vector3(804, -484, 0);
-        Vector3 position2 = new Vector3(-761, -484, 0);
-
-        GameObject buttonNext = new GameObject();
-        buttonNext.name = "ButtonNext";
-        buttonNext.transform.SetParent(panel.transform, false);
-        RectTransform rectNext = buttonNext.AddComponent<RectTransform>();
-        rectNext.localPosition = position;
-        buttonNext.AddComponent<UnityEngine.UI.Image>();
-        buttonNext.AddComponent<UnityEngine.UI.Button>();
-        buttonNext.GetComponent<UnityEngine.UI.Image>().sprite = buttonSprite;
-
-        GameObject buttonLast = new GameObject();
-        buttonLast.name = "ButtonLast";
-        buttonLast.transform.SetParent(panel.transform, false);
-        RectTransform rectLast = buttonLast.AddComponent<RectTransform>();
-        rectLast.localPosition = position2;
-        buttonLast.AddComponent<UnityEngine.UI.Image>();
-        buttonLast.AddComponent<UnityEngine.UI.Button>();
-        buttonLast.GetComponent<UnityEngine.UI.Image>().sprite = buttonSprite;
+        AddBubbles(StickBubbles.bubblesFirstPage);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (nPage == 0)
+        {
+            buttonViewLast.SetActive(false);
+            buttonViewLast.GetComponent<Button>().enabled = false;
+        }
+        else
+        {
+            buttonViewLast.SetActive(true);
+            buttonViewLast.GetComponent<Button>().enabled = true;
+        }
     }
 
-    private void DestroyRemainingBubbles()
+    public void AddBubbles(List<Dictionary<string, object>> bubbles)
     {
-        for (int i = 0; i < StickBubbles.remainingBubbles.Count; i++)
+        for (int i = 0; i < bubbles.Count; i++)
         {
-            Destroy(StickBubbles.remainingBubbles[i]);
+            GameObject bubble = new GameObject($"Bubble_{i}");
+            bubble.transform.SetParent(bubbleContainer.transform, false);
+            Image image = bubble.AddComponent<Image>();
+            image.sprite = (Sprite)bubbles[i]["sprite"];
+            RectTransform rectTransform = bubble.GetComponent<RectTransform>();
+            rectTransform.anchoredPosition = (Vector3)bubbles[i]["position"];
+
+            Vector2 newSize = rectTransform.sizeDelta;
+            newSize.x = 125;
+            newSize.y = 155;
+            rectTransform.sizeDelta = newSize;
         }
+    }
+
+    public void NextPage()
+    {
+        
+        if (nPage > 1)
+        {
+            //SceneManager.LoadScene("ShowMangas");
+        }
+        else
+        {
+            nPage++;
+            page.GetComponent<Image>().sprite = StickBubbles.randomPages[nPage];
+            switch (nPage)
+            {
+                case 0:
+                    AddBubbles(StickBubbles.bubblesFirstPage);
+                    break;
+                case 1:
+                    AddBubbles(StickBubbles.bubblesSecondPage);
+                    break;
+                case 2:
+                    AddBubbles(StickBubbles.bubblesThirdPage);
+                    break;
+                default:
+                    Debug.LogWarning("nPage tiene un valor inesperado: " + nPage);
+                    break;
+            }
+
+        }
+
+    }
+
+    public void LastPage()
+    {
+        nPage--;
+        page.GetComponent<Image>().sprite = StickBubbles.randomPages[nPage];
+
+        switch (nPage)
+        {
+            case 0:
+                AddBubbles(StickBubbles.bubblesFirstPage);
+                break;
+            case 1:
+                AddBubbles(StickBubbles.bubblesSecondPage);
+                break;
+            case 2:
+                AddBubbles(StickBubbles.bubblesThirdPage);
+                break;
+            default:
+                Debug.LogWarning("nPage tiene un valor inesperado: " + nPage);
+                break;
+        }
+
     }
 }

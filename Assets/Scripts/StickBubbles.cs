@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class StickBubbles : MonoBehaviour
 {
@@ -17,6 +18,12 @@ public class StickBubbles : MonoBehaviour
     public static bool isDragging = false;
     public float seconds;
 
+    public static List<Dictionary<string, object>> bubblesFirstPage = new List<Dictionary<string, object>>();
+    public static List<Dictionary<string, object>> bubblesSecondPage = new List<Dictionary<string, object>>();
+    public static List<Dictionary<string, object>> bubblesThirdPage = new List<Dictionary<string, object>>();
+
+
+
     public static int nPages = 0;
     public int[] lastRand;
     public static Sprite[] randomPages = new Sprite[3];
@@ -27,26 +34,33 @@ public class StickBubbles : MonoBehaviour
 
     private void Awake()
     {
-
+        
         InitializeBubbles();  
      
     }
 
     void Start()
     {
-        seconds = 15;
-        timer.text = $"{seconds}";
-        manga.GetComponent<Image>().sprite = randomPages[nPages];
-        DontDestroyOnLoad(UI);
+        DontDestroyOnLoad(gameObject);
+        if(timer != null)
+        {
+            seconds = 15;
+            timer.text = $"{seconds}";
+            manga.GetComponent<Image>().sprite = randomPages[nPages];
+        }
+        
     }
 
     void Update()
     {
-        Countdown();
-        if (seconds == 0)
+        if (timer != null)
         {
-            HideCollidedObjects();
-            NextPage();
+            Countdown();
+            if (seconds == 0)
+            {
+                HideCollidedObjects();
+                NextPage();
+            }
         }
     }
 

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -67,12 +68,40 @@ public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler, IPointerEn
                 StickBubbles.collidedObjects.Add(gameObject);
             }
             droppedInside = true;
+
+            // Obtener el sprite y la posición
+            Sprite bubbleSprite = gameObject.GetComponent<Image>().sprite;
+            RectTransform rectTransform = gameObject.GetComponent<RectTransform>();
+            Vector3 bubblePosition = rectTransform.anchoredPosition;
+
+            var bubbleData = new Dictionary<string, object>
+        {
+            { "sprite", bubbleSprite },
+            { "position", bubblePosition }
+        };
+
+            switch (StickBubbles.nPages)
+            {
+                case 0:
+                    StickBubbles.bubblesFirstPage.Add(bubbleData);
+                    break;
+                case 1:
+                    StickBubbles.bubblesSecondPage.Add(bubbleData);
+                    break;
+                case 2:
+                    StickBubbles.bubblesThirdPage.Add(bubbleData);
+                    break;
+                default:
+                    Debug.LogWarning("nPages tiene un valor inesperado: " + StickBubbles.nPages);
+                    break;
+            }
         }
         else
         {
             transform.position = originalPos;
         }
     }
+
 
 
     public bool IsFullyInsideManga()
