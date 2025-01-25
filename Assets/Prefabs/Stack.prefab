@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -2377659488978731394, guid: 3f35b0ccec2ee18489db5a280000f1d8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9046499889587876513, guid: b04249565c249b24eb38abbbec170675, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SelectStack, Assembly-CSharp
         m_MethodName: NextScene
         m_Mode: 1
