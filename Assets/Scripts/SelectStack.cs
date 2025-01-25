@@ -19,7 +19,7 @@ public class SelectStack : MonoBehaviour
 
 
     private void OnSpritesLoaded(AsyncOperationHandle<IList<Sprite>> handle)
-    {
+    { 
         if (handle.Status == AsyncOperationStatus.Succeeded)
         {
             Debug.Log("Se cargaron " + handle.Result.Count + " sprites.");

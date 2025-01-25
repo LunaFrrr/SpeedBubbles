@@ -11,11 +11,9 @@ public class StickBubbles : MonoBehaviour
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI pagesText;
 
-    public Sprite[] bubbleSprites = new Sprite[14];
     public Sprite[] pages = new Sprite[3];
     public GameObject manga;
     public GameObject bubbleContainer;
-    public GameObject UI;
     public static GameObject[] bubbles;
     public static bool isDragging = false;
     public float seconds;
@@ -24,8 +22,6 @@ public class StickBubbles : MonoBehaviour
     public static List<Dictionary<string, object>> bubblesSecondPage = new List<Dictionary<string, object>>();
     public static List<Dictionary<string, object>> bubblesThirdPage = new List<Dictionary<string, object>>();
 
-
-
     public static int nPages = 0;
     public int[] lastRand;
     public static Sprite[] randomPages = new Sprite[3];
@@ -33,8 +29,6 @@ public class StickBubbles : MonoBehaviour
     public static List<GameObject> remainingBubbles = new List<GameObject>();
     public static List<GameObject> collidedObjects = new List<GameObject>();
 
-    public string folderPath = "Sprites"; // Ruta dentro de la carpeta Resources
-    private List<Sprite> selectedSprites = new List<Sprite>();
 
     private void Awake()
     {

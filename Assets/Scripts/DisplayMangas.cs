@@ -12,8 +12,6 @@ public class DisplayMangas : MonoBehaviour
     public GameObject buttonViewLast;
     public GameObject page;
 
-
-    public Sprite[] bubbleSprites = new Sprite[14];
     public GameObject bubbleContainer;
 
     private void Awake()
