@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f16f23f60912eb240a0cafadd1bcde38
+guid: b6bc5494fca386d44a1857fd64955453
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5005809186000079087
-    second: grito_peq_02_0
+      213: 3377144474999664775
+    second: "conversaci\xF3n_peq_06_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: grito_peq_02_0
+      name: "conversaci\xF3n_peq_06_0"
       rect:
         serializedVersion: 2
-        x: 8
-        y: 0
-        width: 234
-        height: 310
+        x: 1
+        y: 31
+        width: 247
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe80ce8cee4387540800000000000000
-      internalID: 5005809186000079087
+      spriteID: 7803783d1070ede20800000000000000
+      internalID: 3377144474999664775
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      grito_peq_02_0: 5005809186000079087
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

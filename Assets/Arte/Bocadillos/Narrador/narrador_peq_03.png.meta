@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3b7811788e98e644ab7b7dd86caf1268
+guid: 858f96a30bccc3e468b16634f475e92a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2167349779037332467
-    second: "conversaci\xF3n_peq_03_0"
+      213: 8265333254827127756
+    second: narrador_peq_03_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "conversaci\xF3n_peq_03_0"
+      name: narrador_peq_03_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 31
-        width: 247
-        height: 248
+        x: 0
+        y: 28
+        width: 249
+        height: 253
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0c557cebd60ce1e0800000000000000
-      internalID: -2167349779037332467
+      spriteID: cc3b13cbdcc54b270800000000000000
+      internalID: 8265333254827127756
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      "conversaci\xF3n_peq_03_0": -2167349779037332467
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b1ef3a8b19776db46bda84bf1eb455d9
+guid: d35e60b0ec6a8834994814e715b9c869
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6877478114072925206
-    second: grito_grande_02_0
+      213: 2220721324568291785
+    second: "conversaci\xF3n_grande_02_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: grito_grande_02_0
+      name: "conversaci\xF3n_grande_02_0"
       rect:
         serializedVersion: 2
-        x: 13
-        y: 0
-        width: 224
-        height: 310
+        x: 10
+        y: 1
+        width: 230
+        height: 308
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 61417d308e5b17f50800000000000000
-      internalID: 6877478114072925206
+      spriteID: 9c92700674691de10800000000000000
+      internalID: 2220721324568291785
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      grito_grande_02_0: 6877478114072925206
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

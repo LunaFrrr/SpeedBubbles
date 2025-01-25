@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 238c33d6ed50fef4780674fce79963d9
+guid: c3fc291e25cb5f84fa9367a3faa97aeb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6317908646987020438
-    second: "conversaci\xF3n_grande_01_0"
+      213: -7038486499216224687
+    second: "conversaci\xF3n_peq_07_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "conversaci\xF3n_grande_01_0"
+      name: "conversaci\xF3n_peq_07_0"
       rect:
         serializedVersion: 2
-        x: 15
-        y: 7
-        width: 220
-        height: 296
+        x: 1
+        y: 31
+        width: 247
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 698b703d078bda750800000000000000
-      internalID: 6317908646987020438
+      spriteID: 15e85d902d5425e90800000000000000
+      internalID: -7038486499216224687
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      "conversaci\xF3n_grande_01_0": 6317908646987020438
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
