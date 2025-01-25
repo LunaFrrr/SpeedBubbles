@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      narrador_grande_03_0: 8438306372769242032
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
