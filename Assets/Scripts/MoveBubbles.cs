@@ -61,6 +61,7 @@ public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler, IPointerEn
         StickBubbles.isDragging = false;
         if (IsFullyInsideManga())
         {
+            StickBubbles.remainingBubbles.Remove(gameObject);
             if (!StickBubbles.collidedObjects.Contains(gameObject))
             {
                 StickBubbles.collidedObjects.Add(gameObject);

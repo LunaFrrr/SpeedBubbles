@@ -1386,7 +1386,7 @@ GameObject:
   - component: {fileID: 636124255}
   - component: {fileID: 636124254}
   m_Layer: 0
-  m_Name: Script
+  m_Name: Loop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1427,6 +1427,7 @@ MonoBehaviour:
   - {fileID: -6045650064619850873, guid: 4607e4c77f3beaa46b9c6f3a534fca4a, type: 3}
   manga: {fileID: 1328916358}
   bubbleContainer: {fileID: 885172472}
+  UI: {fileID: 2002330405}
   seconds: 0
   lastRand: 
 --- !u!4 &636124255

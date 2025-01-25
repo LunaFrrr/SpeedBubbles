@@ -12,6 +12,7 @@ public class StickBubbles : MonoBehaviour
     public Sprite[] pages = new Sprite[3];
     public GameObject manga;
     public GameObject bubbleContainer;
+    public GameObject UI;
     public static GameObject[] bubbles;
     public static bool isDragging = false;
     public float seconds;
@@ -36,6 +37,7 @@ public class StickBubbles : MonoBehaviour
         seconds = 15;
         timer.text = $"{seconds}";
         manga.GetComponent<Image>().sprite = randomPages[nPages];
+        DontDestroyOnLoad(UI);
     }
 
     void Update()
@@ -109,8 +111,9 @@ public class StickBubbles : MonoBehaviour
     public void NextPage()
     {
         nPages++;
-        if (nPages < 3)
+        if (nPages < 3) 
         {
+            seconds = 15;
             manga.GetComponent<Image>().sprite = randomPages[nPages];
             for (int i = 0; i < bubbles.Length; i++)
             {
@@ -122,7 +125,7 @@ public class StickBubbles : MonoBehaviour
         }
         else
         {
-            //SceneManager.LoadScene("StickBubblesManga");
+            SceneManager.LoadScene("ShowMangas");
         }
     }
 
