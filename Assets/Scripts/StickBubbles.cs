@@ -48,7 +48,6 @@ public class StickBubbles : MonoBehaviour
             timer.text = $"{seconds}";
             manga.GetComponent<Image>().sprite = randomPages[nPages];
         }
-        
     }
 
     void Update()
@@ -113,11 +112,11 @@ public class StickBubbles : MonoBehaviour
 
     private void AddImageBubbles()
     {
-        for (int i = 0; i < bubbleSprites.Length; i++)
+        for (int i = 0; i < SelectStack.randomBubbles.Count; i++)
         {
             if (i < bubbles.Length)
             {
-                bubbles[i].GetComponent<Image>().sprite = bubbleSprites[i];
+                bubbles[i].GetComponent<Image>().sprite = SelectStack.randomBubbles[i];
             }
         }
     }

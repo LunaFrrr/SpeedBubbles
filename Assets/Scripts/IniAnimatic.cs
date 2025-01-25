@@ -17,6 +17,6 @@ public class IniAnimatic : MonoBehaviour
 
     public void NextScene()
     {
-        SceneManager.LoadScene("StickBubblesManga");
+        SceneManager.LoadScene("MenuBubbleSelection");
     }
 }
