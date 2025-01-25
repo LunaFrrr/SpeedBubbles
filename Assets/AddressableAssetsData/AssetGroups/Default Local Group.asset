@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: b8047391697c2a94dbde8d82af871cbd
   m_SerializeEntries:
+  - m_GUID: 021130c5445479e4a92db0a24c6ce26a
+    m_Address: Assets/Arte/Bocadillos/Narrador/narrador_peq_05.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 02434eecc98ad0148a47d11ce70d916e
     m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_peq_01.png"
     m_ReadOnly: 0
@@ -33,8 +39,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28d350aebf7b2d2499dec339e5c55066
+    m_Address: Assets/Arte/Bocadillos/Narrador/narrador_peq_04.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2f091daf18b265a4d8c025a8b3552726
     m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_grande_05.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31bbcb604a5aa404b99c5d495c49ab81
+    m_Address: Assets/Arte/Bocadillos/Pensar/bonito_peq_03.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
@@ -45,14 +63,50 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4716e637ee60d1140b1f38513b92b12d
+    m_Address: Assets/Arte/Bocadillos/Grito/grito_grande_06.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c854a4c1cf3161458965f55e2bd896f
+    m_Address: Assets/Arte/Bocadillos/Pensar/bonito_peq_02.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4ee43a8f10fdc1d40b7ce0d7f6234703
     m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_peq_02.png"
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f6a53011de6d8745a0a71370be94d00
+    m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_peq_13.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 50d56314df341fb44964f4d4ec6a1076
+    m_Address: Assets/Arte/Bocadillos/Grito/grito_grande_05.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 574576a28389c964fa2cd9f034667073
+    m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_peq_09.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5a0973e09d19c2948b40cddd802f4f99
     m_Address: Assets/Arte/Bocadillos/Narrador/narrador_peq_02.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5be47064e3e5cac4183d511db8e52e40
+    m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_grande_16.png"
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
@@ -69,8 +123,50 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ed93c1e78ca553418c419ab5925b1ac
+    m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_grande_10.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 74fa1240ae52bab419a659f8e41bd18b
+    m_Address: Assets/Arte/Bocadillos/Narrador/narrador_peq_06.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78e4d53b513771543a1203691c3fc782
+    m_Address: Assets/Arte/Bocadillos/Pensar/bonito_gran_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7ea962e22c5a62c48976ce1932e31f9f
+    m_Address: Assets/Arte/Bocadillos/Grito/grito_peq_06.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8156963a24b3f894e86747f0debbd231
+    m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_peq_14.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 831d88524bc347442b911b35f88e04b9
+    m_Address: Assets/Arte/Bocadillos/Narrador/narrador_grande_02.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 858f96a30bccc3e468b16634f475e92a
     m_Address: Assets/Arte/Bocadillos/Narrador/narrador_peq_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88881551d4cdb7744b1d76d0a10f5701
+    m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_peq_17.png"
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
@@ -81,8 +177,32 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8bb55ae37a6876a4cbaf8b92b05019d2
+    m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_peq_12.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c82f876f6c017f4a92f01c60a2fb82a
+    m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_peq_10.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8fe20140bdb635040b2ac9d4c397d4bc
     m_Address: Assets/Arte/Bocadillos/Grito/grito_peq_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95666517a7028ee4581347bef87ea742
+    m_Address: Assets/Arte/Bocadillos/Grito/grito_peq_04.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9d561f6cf71893248a994fa44ace4817
+    m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_peq_11.png"
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
@@ -95,6 +215,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a5c7bdf7064310c4fb4aa74f6fc0a3d3
     m_Address: Assets/Arte/Bocadillos/Grito/grito_grande_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a8625ab29f039724ba10ea9207ad3249
+    m_Address: Assets/Arte/Bocadillos/Pensar/bonito_gran_02.png
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
@@ -117,6 +243,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc57209d1f981a7499d6991c970921ad
+    m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_peq_16.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bdc54485e3138a84b83656222d5effff
+    m_Address: Assets/Arte/Bocadillos/Grito/grito_peq_07.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bde62228e2c30fb4098a1ea2a0532f56
     m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_grande_08.png"
     m_ReadOnly: 0
@@ -125,6 +263,36 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c3fc291e25cb5f84fa9367a3faa97aeb
     m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_peq_07.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c90c955d1c0f8b746b4c278e0b66c151
+    m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_grande_09.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: caac8cd70918ace4182fa6374403df90
+    m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_grande_13.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d0a5cab7a3ef2dd4eae69fe9540d2ab9
+    m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_grande_11.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d0ffeea92f5cb0441a4c81dcc219b1df
+    m_Address: Assets/Arte/Bocadillos/Narrador/narrador_grande_03.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d24288be4837be2438716a744d3f2b29
+    m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_grande_15.png"
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
@@ -141,6 +309,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d3beb8cef29ce7043826eaab36e2ab22
+    m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_grande_12.png"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e64533e43a31a194d8dfd8311a2fb68c
     m_Address: Assets/Arte/Bocadillos/Grito/grito_grande_01.png
     m_ReadOnly: 0
@@ -149,6 +323,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e9f2cfb9867c621478e4884a8652df7c
     m_Address: Assets/Arte/Bocadillos/Bonito/bonito_peq_01.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea21c76e9b92d394e9d284bfd24b0c63
+    m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_peq_15.png"
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
@@ -171,14 +351,32 @@ MonoBehaviour:
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f412e812ed2177945a235690bc70bfb0
+    m_Address: Assets/Arte/Bocadillos/Grito/grito_peq_05.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f4960de553934ad42b3db0f0911ccbbe
     m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_peq_08.png"
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6f3bdca5ace0a94bb09797fb3658dba
+    m_Address: Assets/Arte/Bocadillos/Grito/grito_grande_04.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f9b9025edfd153a49a64bae0fd934215
     m_Address: Assets/Arte/Bocadillos/Grito/grito_peq_01.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fd848414a9603f445b06c8907cffc6b6
+    m_Address: "Assets/Arte/Bocadillos/Conversaci\xF3n/conversaci\xF3n_grande_14.png"
     m_ReadOnly: 0
     m_SerializedLabels:
     - default
