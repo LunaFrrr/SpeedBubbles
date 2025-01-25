@@ -8,7 +8,9 @@ using Unity.VisualScripting;
 
 public class StickBubbles : MonoBehaviour
 {
-    public TextMeshProUGUI timer;
+    public TextMeshProUGUI timerText;
+    public TextMeshProUGUI pagesText;
+
     public Sprite[] bubbleSprites = new Sprite[14];
     public Sprite[] pages = new Sprite[3];
     public GameObject manga;
@@ -42,17 +44,18 @@ public class StickBubbles : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-        if(timer != null)
+        pagesText.text = $"{nPages + 1}/3";
+        if(timerText != null)
         {
             seconds = 15;
-            timer.text = $"{seconds}";
+            timerText.text = $"{seconds}";
             manga.GetComponent<Image>().sprite = randomPages[nPages];
         }
     }
 
     void Update()
     {
-        if (timer != null)
+        if (timerText != null)
         {
             Countdown();
             if (seconds == 0)
@@ -74,7 +77,7 @@ public class StickBubbles : MonoBehaviour
             seconds = 0;
         }
         int textSeconds = Mathf.FloorToInt(seconds % 60);
-        timer.text = $"{textSeconds}";
+        timerText.text = $"{textSeconds}";
     }
 
     private void InitializeBubbles()
@@ -124,6 +127,7 @@ public class StickBubbles : MonoBehaviour
     public void NextPage()
     {
         nPages++;
+        pagesText.text = $"{nPages + 1}/3";
         if (nPages < 3) 
         {
             seconds = 15;
