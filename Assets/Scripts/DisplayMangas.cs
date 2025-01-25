@@ -12,6 +12,7 @@ public class DisplayMangas : MonoBehaviour
     public GameObject buttonViewLast;
     public GameObject page;
     public GameObject sounds;
+    public AudioSource endSound;
 
     public GameObject bubbleContainer;
 
@@ -22,6 +23,7 @@ public class DisplayMangas : MonoBehaviour
 
     void Start()
     {
+        DontDestroyOnLoad(endSound);
         AddBubbles(StickBubbles.bubblesFirstPage);
     }
 
@@ -69,6 +71,7 @@ public class DisplayMangas : MonoBehaviour
         
         if (nPage > 1)
         {
+            endSound.Play();
             SceneManager.LoadScene("EndAnimatic");
         }
         else

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      narrador_peq_05_0: -1389648845663200738
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

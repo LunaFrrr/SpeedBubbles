@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      grito_grande_05_0: 6782377211565917388
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

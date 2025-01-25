@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bonito_gran_02_0: -9030695153320335297
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

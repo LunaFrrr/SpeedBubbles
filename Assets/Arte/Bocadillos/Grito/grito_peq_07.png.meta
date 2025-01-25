@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      grito_peq_07_0: 8307177920409110827
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

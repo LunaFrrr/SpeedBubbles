@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bg_montonesBocadillos_0: 1925249662001975646
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
