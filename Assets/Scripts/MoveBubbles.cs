@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler, IPointerEnterHandler, IPointerExitHandler
+public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     private Vector3 originalPos;
     private Canvas canvas;
@@ -13,6 +13,8 @@ public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler, IPointerEn
     private bool droppedInside = false;
 
     public StickBubbles StickBubbles;
+    public AudioSource dropBubble;
+    public AudioSource pickBubble;
 
     void Start()
     {
@@ -25,6 +27,11 @@ public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler, IPointerEn
     void Update()
     {
 
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        pickBubble.Play();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -60,6 +67,7 @@ public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler, IPointerEn
 
     public void OnDrop(PointerEventData eventData)
     {
+        dropBubble.Play();
         StickBubbles.isDragging = false;
         if (IsFullyInsideManga())
         {

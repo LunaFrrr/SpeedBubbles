@@ -43,8 +43,8 @@ public class StickBubbles : MonoBehaviour
         pagesText.text = $"{nPages + 1}/3";
         if(timerText != null)
         {
-            seconds = 15;
-            timerText.text = $"{seconds}";
+            seconds = 60;
+            timerText.text = $"0:{seconds}";
             manga.GetComponent<Image>().sprite = randomPages[nPages];
         }
     }
@@ -73,7 +73,7 @@ public class StickBubbles : MonoBehaviour
             seconds = 0;
         }
         int textSeconds = Mathf.FloorToInt(seconds % 60);
-        timerText.text = $"{textSeconds}";
+        timerText.text = $"0:{textSeconds}";
     }
 
     private void InitializeBubbles()
