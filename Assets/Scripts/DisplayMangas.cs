@@ -16,6 +16,9 @@ public class DisplayMangas : MonoBehaviour
 
     public GameObject bubbleContainer;
 
+    private GameObject lastSong;
+    private GameObject loop;
+
 
     private void Awake()
     {
@@ -25,6 +28,7 @@ public class DisplayMangas : MonoBehaviour
 
     void Start()
     {
+        lastSong = GameObject.Find("Music");
         DontDestroyOnLoad(endSound);
         AddBubbles(StickBubbles.bubblesFirstPage);
     }
@@ -74,6 +78,8 @@ public class DisplayMangas : MonoBehaviour
         
         if (nPage > 1)
         {
+            Destroy(loop);
+            Destroy(lastSong);
             endSound.Play();
             SceneManager.LoadScene("EndAnimatic");
         }

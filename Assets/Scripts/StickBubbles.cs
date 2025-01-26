@@ -17,7 +17,7 @@ public class StickBubbles : MonoBehaviour
     public GameObject bubbleContainer;
     public static GameObject[] bubbles;
     public static bool isDragging = false;
-    public float seconds;
+    private float seconds;
 
     public static List<Dictionary<string, object>> bubblesFirstPage = new List<Dictionary<string, object>>();
     public static List<Dictionary<string, object>> bubblesSecondPage = new List<Dictionary<string, object>>();
@@ -34,25 +34,28 @@ public class StickBubbles : MonoBehaviour
     public AudioSource music;
     public GameObject info;
 
-    public static bool readBubbles = false;
+    public static bool readBubbles;
 
     private SelectStack selectStack;
     private GameObject lastMusic;
     private void Awake()
     {
+        readBubbles = false;
+        nextButton.SetActive(false);
         info.SetActive(true);
         InitializeBubbles();
         lastMusic = GameObject.Find("Selection");
-
     }
 
     void Start()
     {
+        seconds = 15;
+        DontDestroyOnLoad(music);
         DontDestroyOnLoad(gameObject);
         pagesText.text = $"{nPages + 1}/3";
         if(timerText != null)
         {
-            seconds = 15;
+            Debug.Log("ENTRAAAA");
             timerText.text = $"0:{seconds}";
             manga.GetComponent<Image>().sprite = randomPages[nPages];
         }
