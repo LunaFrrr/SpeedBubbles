@@ -102,7 +102,7 @@ public class StickBubbles : MonoBehaviour
         if (seconds > 0)
         {
             seconds -= Time.deltaTime;
-            if (!readBubbles && seconds >= 59)
+            if (!readBubbles && seconds >= 29)
             {
                 info.SetActive(false);
                 readBubbles = true;
@@ -124,6 +124,10 @@ public class StickBubbles : MonoBehaviour
         if (seconds >= 10)
         {
             textSeconds = Mathf.FloorToInt(seconds % 60).ToString();
+        }
+        else if(seconds < 0)
+        {
+            textSeconds = "00";
         }
         else
         {
@@ -180,9 +184,10 @@ public class StickBubbles : MonoBehaviour
     {
         nextButton.GetComponent<AudioSource>().Play();
         nPages++;
-        pagesText.text = $"{nPages + 1}/3";
+        
         if (nPages < 3) 
         {
+            pagesText.text = $"{nPages + 1}/3";
             seconds = 30;
             manga.GetComponent<Image>().sprite = randomPages[nPages];
             for (int i = 0; i < bubbles.Length; i++)
