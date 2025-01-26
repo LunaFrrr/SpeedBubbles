@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 932ad0d1d13f0b94db43558bc540a90a
+guid: cc9c8fd1777e58446a480a9c3c4ac6cc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5506789976187757702
-    second: logo_speedbubble_blanco_0
+      213: -5428090147103451695
+    second: Creditos_00_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: logo_speedbubble_blanco_0
+      name: Creditos_00_0
       rect:
         serializedVersion: 2
-        x: 294
-        y: 76
-        width: 1313
-        height: 986
+        x: 0
+        y: 0
+        width: 3840
+        height: 2160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7b95a061b3f393b0800000000000000
-      internalID: -5506789976187757702
+      spriteID: 1d5d91d35cc8ba4b0800000000000000
+      internalID: -5428090147103451695
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      logo_speedbubble_blanco_0: -5506789976187757702
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
