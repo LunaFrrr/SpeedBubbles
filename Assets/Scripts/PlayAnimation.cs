@@ -8,6 +8,8 @@ public class PlayAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public string animationStack1 = "BubbleHover";
     public string animationStack2 = "BubbleHover2"; 
     public string animationStack3 = "BubbleHover3";
+
+    public AudioSource soundPaper;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,6 +37,7 @@ public class PlayAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             m_Animation_Name = animationStack3;
         }
 
+        soundPaper.Play();
         m_Animator.SetBool("hover", true);
         m_Animator.Play(m_Animation_Name, 0, 0f);
     }
@@ -42,7 +45,7 @@ public class PlayAnimation : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public void OnPointerExit(PointerEventData eventData)
     {
         m_Animator.SetBool("hover", false);
-       
+        soundPaper.Pause();
     }
 }
 
