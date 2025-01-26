@@ -16,10 +16,12 @@ public class DisplayMangas : MonoBehaviour
 
     public GameObject bubbleContainer;
 
+
     private void Awake()
     {
         page.GetComponent<Image>().sprite = StickBubbles.randomPages[nPage];
     }
+
 
     void Start()
     {
@@ -29,6 +31,7 @@ public class DisplayMangas : MonoBehaviour
 
     void Update()
     {
+
         if (nPage == 0)
         {
             buttonViewLast.SetActive(false);
