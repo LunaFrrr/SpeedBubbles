@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      manga_page_shadow_0: 7595716456273169938
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

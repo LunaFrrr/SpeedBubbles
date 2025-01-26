@@ -17,6 +17,12 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    public void PlayGame()
+    {
+        StartCoroutine(PlaySoundAndExit(buttonSound));
+        StartCoroutine(PlaySoundAndLoadScene(buttonSound, "IniAnimatic"));
+    }
+
     public void backToMenu()
     {
         SceneManager.LoadScene("MainMenu");
