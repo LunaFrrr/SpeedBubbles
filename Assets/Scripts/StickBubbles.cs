@@ -40,6 +40,10 @@ public class StickBubbles : MonoBehaviour
     private GameObject lastMusic;
     private void Awake()
     {
+        bubblesFirstPage.Clear();
+        bubblesSecondPage.Clear();
+        bubblesThirdPage.Clear();
+
         nPages = 0;
         seconds = 15;
         readBubbles = false;
