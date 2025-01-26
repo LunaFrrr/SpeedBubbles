@@ -32,6 +32,7 @@ public class StickBubbles : MonoBehaviour
 
     public AudioSource clock;
     public AudioSource music;
+    public GameObject info;
 
     public static bool readBubbles = false;
 
@@ -39,7 +40,7 @@ public class StickBubbles : MonoBehaviour
     private GameObject lastMusic;
     private void Awake()
     {
-        
+        info.SetActive(true);
         InitializeBubbles();
         lastMusic = GameObject.Find("Selection");
 
@@ -97,6 +98,7 @@ public class StickBubbles : MonoBehaviour
             seconds -= Time.deltaTime;
             if (!readBubbles && seconds >= 59)
             {
+                info.SetActive(false);
                 readBubbles = true;
                 AudioSource audioSource = lastMusic.GetComponent<AudioSource>();
                 if (audioSource != null && audioSource.isPlaying)
