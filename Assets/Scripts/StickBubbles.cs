@@ -31,6 +31,7 @@ public class StickBubbles : MonoBehaviour
     public static List<GameObject> collidedObjects = new List<GameObject>();
 
     public AudioSource clock;
+    public AudioSource music;
 
     public static bool readBubbles = false;
 
@@ -95,6 +96,7 @@ public class StickBubbles : MonoBehaviour
             if (!readBubbles && seconds >= 59)
             {
                 readBubbles = true;
+                music.Play();
             }
         }
         else
@@ -161,6 +163,7 @@ public class StickBubbles : MonoBehaviour
 
     public void NextPage()
     {
+        nextButton.GetComponent<AudioSource>().Play();
         nPages++;
         pagesText.text = $"{nPages + 1}/3";
         if (nPages < 3) 
