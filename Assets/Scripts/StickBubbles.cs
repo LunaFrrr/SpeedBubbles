@@ -10,6 +10,7 @@ public class StickBubbles : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI pagesText;
+    public GameObject nextButton;
 
     public Sprite[] pages = new Sprite[3];
     public GameObject manga;
@@ -31,6 +32,8 @@ public class StickBubbles : MonoBehaviour
 
     public AudioSource clock;
 
+    public static bool readBubbles = false;
+
 
     private void Awake()
     {
@@ -45,7 +48,7 @@ public class StickBubbles : MonoBehaviour
         pagesText.text = $"{nPages + 1}/3";
         if(timerText != null)
         {
-            seconds = 16;
+            seconds = 15;
             timerText.text = $"0:{seconds}";
             manga.GetComponent<Image>().sprite = randomPages[nPages];
         }
@@ -55,11 +58,15 @@ public class StickBubbles : MonoBehaviour
     {
         if (timerText != null)
         {
-            Countdown();
-            if (seconds == 0)
+            
+            if (seconds <= 0)
             {
-                HideCollidedObjects();
-                NextPage();
+                seconds = 60;
+                if (readBubbles)
+                {
+                    HideCollidedObjects();
+                    NextPage();
+                }
             }
             if (seconds <= 10 && !clock.isPlaying)
             {
@@ -69,7 +76,14 @@ public class StickBubbles : MonoBehaviour
             {
                 clock.Pause();
             }
+            Countdown();
         }
+
+        if (!readBubbles)
+        {
+            nextButton.SetActive(false);
+        }
+        else nextButton.SetActive(true);
     }
 
     private void Countdown()
@@ -78,9 +92,14 @@ public class StickBubbles : MonoBehaviour
         if (seconds > 0)
         {
             seconds -= Time.deltaTime;
+            if (!readBubbles && seconds >= 59)
+            {
+                readBubbles = true;
+            }
         }
         else
         {
+            
             seconds = 0;
         }
 
@@ -146,7 +165,7 @@ public class StickBubbles : MonoBehaviour
         pagesText.text = $"{nPages + 1}/3";
         if (nPages < 3) 
         {
-            seconds = 15;
+            seconds = 60;
             manga.GetComponent<Image>().sprite = randomPages[nPages];
             for (int i = 0; i < bubbles.Length; i++)
             {

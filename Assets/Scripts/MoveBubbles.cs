@@ -50,65 +50,71 @@ public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler, IPointerEn
 
     public void OnDrag(PointerEventData eventData)
     {
-        StickBubbles.isDragging = true;
-        transform.localScale = Vector3.one;
-        if (!droppedInside) 
+        if(StickBubbles.readBubbles)
         {
-            gameObject.GetComponent<RectTransform>().SetAsLastSibling();
-            Vector2 localPoint;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                canvas.transform as RectTransform,
-                eventData.position,
-                canvas.worldCamera,
-                out localPoint
-            );
-            transform.position = canvas.transform.TransformPoint(localPoint);
+            StickBubbles.isDragging = true;
+            transform.localScale = Vector3.one;
+            if (!droppedInside)
+            {
+                gameObject.GetComponent<RectTransform>().SetAsLastSibling();
+                Vector2 localPoint;
+                RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                    canvas.transform as RectTransform,
+                    eventData.position,
+                    canvas.worldCamera,
+                    out localPoint
+                );
+                transform.position = canvas.transform.TransformPoint(localPoint);
+            }
         }
     }
 
     public void OnDrop(PointerEventData eventData)
     {
-        dropBubble.Play();
-        StickBubbles.isDragging = false;
-        if (IsFullyInsideManga())
+        if (StickBubbles.readBubbles)
         {
-            StickBubbles.remainingBubbles.Remove(gameObject);
-            if (!StickBubbles.collidedObjects.Contains(gameObject))
+            dropBubble.Play();
+            StickBubbles.isDragging = false;
+            if (IsFullyInsideManga())
             {
-                StickBubbles.collidedObjects.Add(gameObject);
-            }
-            droppedInside = true;
+                StickBubbles.remainingBubbles.Remove(gameObject);
+                if (!StickBubbles.collidedObjects.Contains(gameObject))
+                {
+                    StickBubbles.collidedObjects.Add(gameObject);
+                }
+                droppedInside = true;
 
-            // Obtener el sprite y la posición
-            Sprite bubbleSprite = gameObject.GetComponent<Image>().sprite;
-            RectTransform rectTransform = gameObject.GetComponent<RectTransform>();
-            Vector3 bubblePosition = rectTransform.anchoredPosition;
+                // Obtener el sprite y la posición
+                Sprite bubbleSprite = gameObject.GetComponent<Image>().sprite;
+                RectTransform rectTransform = gameObject.GetComponent<RectTransform>();
+                Vector3 bubblePosition = rectTransform.anchoredPosition;
 
-            var bubbleData = new Dictionary<string, object>
-        {
-            { "sprite", bubbleSprite },
-            { "position", bubblePosition }
-        };
-
-            switch (StickBubbles.nPages)
+                var bubbleData = new Dictionary<string, object>
             {
-                case 0:
-                    StickBubbles.bubblesFirstPage.Add(bubbleData);
-                    break;
-                case 1:
-                    StickBubbles.bubblesSecondPage.Add(bubbleData);
-                    break;
-                case 2:
-                    StickBubbles.bubblesThirdPage.Add(bubbleData);
-                    break;
-                default:
-                    Debug.LogWarning("nPages tiene un valor inesperado: " + StickBubbles.nPages);
-                    break;
+                { "sprite", bubbleSprite },
+                { "position", bubblePosition }
+            };
+
+                switch (StickBubbles.nPages)
+                {
+                    case 0:
+                        StickBubbles.bubblesFirstPage.Add(bubbleData);
+                        break;
+                    case 1:
+                        StickBubbles.bubblesSecondPage.Add(bubbleData);
+                        break;
+                    case 2:
+                        StickBubbles.bubblesThirdPage.Add(bubbleData);
+                        break;
+                    default:
+                        Debug.LogWarning("nPages tiene un valor inesperado: " + StickBubbles.nPages);
+                        break;
+                }
             }
-        }
-        else
-        {
-            transform.position = originalPos;
+            else
+            {
+                transform.position = originalPos;
+            }
         }
     }
 
