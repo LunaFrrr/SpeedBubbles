@@ -6,9 +6,15 @@ using UnityEngine.Video;
 public class PlayVideo : MonoBehaviour
 {
     private VideoPlayer videoPlayer;
+    private GameObject music;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        music = GameObject.Find("MusicMenu");
+        if (music != null)
+        {
+            Destroy(music);
+        }
         string videoPath = Path.Combine(Application.streamingAssetsPath, "animatica_ini.mp4");
 
         if (File.Exists(videoPath))
