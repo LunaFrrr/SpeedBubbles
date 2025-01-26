@@ -201,7 +201,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8547457}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1521350466}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8547457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,6 +556,7 @@ GameObject:
   - component: {fileID: 1521350464}
   - component: {fileID: 1521350463}
   - component: {fileID: 1521350462}
+  - component: {fileID: 1521350466}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -634,6 +647,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1521350466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521350461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3953f6fd13f2a6b469d32161db0d9433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1788078957
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,8 +968,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 568, y: -240}
-  m_SizeDelta: {x: 151.25, y: 235.25}
+  m_AnchoredPosition: {x: 397, y: 100}
+  m_SizeDelta: {x: 320, y: 179}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2135197667
 MonoBehaviour:
@@ -989,7 +1014,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2135197668}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1521350466}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: ToCredits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2135197668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,7 +1047,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2869977732921886294, guid: 35e406b8dc921a04d93089d23d884d53, type: 3}
+  m_Sprite: {fileID: 8953431723046996108, guid: 50e87970e4e172648b6cb5e9481a56ae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
