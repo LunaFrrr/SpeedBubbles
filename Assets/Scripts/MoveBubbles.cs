@@ -38,7 +38,7 @@ public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler, IPointerEn
     {
         if (!droppedInside && !StickBubbles.isDragging)
         {
-            transform.localScale = Vector3.one * 2;
+            transform.localScale = Vector3.one * 1.5f;
             gameObject.GetComponent<RectTransform>().SetAsLastSibling();
         }
     }
