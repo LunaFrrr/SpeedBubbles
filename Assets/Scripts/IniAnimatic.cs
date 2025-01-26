@@ -1,22 +1,14 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class IniAnimatic : MonoBehaviour
+public class IniAnimatic : MonoBehaviour, IPointerDownHandler
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public GameObject skipButton;
+
+    public void OnPointerDown(PointerEventData eventData)
     {
-        
+        skipButton.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void NextScene()
-    {
-        SceneManager.LoadScene("MenuBubbleSelection");
-    }
 }
