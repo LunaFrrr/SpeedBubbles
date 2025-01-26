@@ -109,12 +109,12 @@ TextureImporter:
       name: Monton2_frames_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 376
+        width: 379
         height: 420
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -131,12 +131,12 @@ TextureImporter:
       name: Monton2_frames_1
       rect:
         serializedVersion: 2
-        x: 399
+        x: 397
         y: 0
-        width: 377
+        width: 381
         height: 420
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -153,12 +153,12 @@ TextureImporter:
       name: Monton2_frames_2
       rect:
         serializedVersion: 2
-        x: 799
+        x: 793
         y: 0
-        width: 376
+        width: 382
         height: 420
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ad59267810005e044b38af996e9f5b93
     internalID: 0
     vertices: []
     indices: 
