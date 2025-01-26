@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;  // Asegúrate de tener esto para trabajar con los UI Buttons
@@ -83,8 +83,7 @@ public class DisplayMangas : MonoBehaviour
             Destroy(loop);
             Destroy(lastSong);
             Destroy(selection);
-            endSound.Play();
-            SceneManager.LoadScene("EndAnimatic");
+            StartCoroutine(PlaySoundAndLoadScene(endSound, "EndAnimatic"));
         }
         else
         {
@@ -135,4 +134,12 @@ public class DisplayMangas : MonoBehaviour
         }
 
     }
+
+    private IEnumerator PlaySoundAndLoadScene(AudioSource sound, string sceneName)
+    {
+        sound.Play();
+        yield return new WaitForSeconds(0.7f);  // Espera a que termine el sonido
+        SceneManager.LoadScene(sceneName);
+    }
+
 }

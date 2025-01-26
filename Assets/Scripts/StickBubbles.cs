@@ -71,7 +71,7 @@ public class StickBubbles : MonoBehaviour
             
             if (seconds <= 0)
             {
-                seconds = 60;
+                seconds = 30;
                 if (readBubbles)
                 {
                     HideCollidedObjects();
@@ -183,7 +183,7 @@ public class StickBubbles : MonoBehaviour
         pagesText.text = $"{nPages + 1}/3";
         if (nPages < 3) 
         {
-            seconds = 60;
+            seconds = 30;
             manga.GetComponent<Image>().sprite = randomPages[nPages];
             for (int i = 0; i < bubbles.Length; i++)
             {
