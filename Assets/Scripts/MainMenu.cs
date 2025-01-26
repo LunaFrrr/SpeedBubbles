@@ -1,32 +1,60 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public AudioSource buttonSound;
+    public AudioSource music;
+
+    private static bool musicPlaying = false;
+
+    void Awake()
     {
-        
+        if (musicPlaying)
+        {
+            Destroy(music.gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayGame()
     {
-        
+        StartCoroutine(PlaySoundAndExit(buttonSound));
+        StartCoroutine(PlaySoundAndLoadScene(buttonSound, "IniAnimatic"));
     }
 
     public void backToMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        StartCoroutine(PlaySoundAndLoadScene(buttonSound, "MainMenu"));
     }
 
     public void ToCredits()
     {
-        SceneManager.LoadScene("EndCredits");
+        if (!musicPlaying)
+        {
+            DontDestroyOnLoad(music.gameObject);
+            musicPlaying = true;
+        }
+        StartCoroutine(PlaySoundAndLoadScene(buttonSound, "EndCredits"));
     }
 
     public void ExitGame()
     {
+        StartCoroutine(PlaySoundAndExit(buttonSound));
+    }
+
+    private IEnumerator PlaySoundAndLoadScene(AudioSource sound, string sceneName)
+    {
+        sound.Play();
+        yield return new WaitForSeconds(0.5f);  // Espera a que termine el sonido
+        SceneManager.LoadScene(sceneName);
+    }
+
+    private IEnumerator PlaySoundAndExit(AudioSource sound)
+    {
+        sound.Play();
+        yield return new WaitForSeconds(0.5f);  // Espera a que termine el sonido
         Application.Quit();
     }
 }
