@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      boton pasar pagina_0: -3121570193996452235
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
