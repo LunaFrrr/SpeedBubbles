@@ -35,12 +35,14 @@ public class StickBubbles : MonoBehaviour
 
     public static bool readBubbles = false;
 
-
+    private SelectStack selectStack;
+    private GameObject lastMusic;
     private void Awake()
     {
         
-        InitializeBubbles();  
-     
+        InitializeBubbles();
+        lastMusic = GameObject.Find("Selection");
+
     }
 
     void Start()
@@ -96,7 +98,12 @@ public class StickBubbles : MonoBehaviour
             if (!readBubbles && seconds >= 59)
             {
                 readBubbles = true;
-                music.Play();
+                AudioSource audioSource = lastMusic.GetComponent<AudioSource>();
+                if (audioSource != null && audioSource.isPlaying)
+                {
+                    audioSource.Pause();
+                }
+                    music.Play();
             }
         }
         else
