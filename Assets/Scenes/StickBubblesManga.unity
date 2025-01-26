@@ -166,6 +166,10 @@ PrefabInstance:
       value: Bubble12
       objectReference: {fileID: 0}
     - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
+      propertyPath: loop
+      value: 
+      objectReference: {fileID: 636124253}
+    - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
       propertyPath: dropBubble
       value: 
       objectReference: {fileID: 69867316}
@@ -788,6 +792,10 @@ PrefabInstance:
       value: Bubble14
       objectReference: {fileID: 0}
     - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
+      propertyPath: loop
+      value: 
+      objectReference: {fileID: 636124253}
+    - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
       propertyPath: dropBubble
       value: 
       objectReference: {fileID: 69867316}
@@ -1042,6 +1050,10 @@ PrefabInstance:
       value: Bubble6
       objectReference: {fileID: 0}
     - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
+      propertyPath: loop
+      value: 
+      objectReference: {fileID: 636124253}
+    - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
       propertyPath: dropBubble
       value: 
       objectReference: {fileID: 69867316}
@@ -1153,6 +1165,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bubble13
       objectReference: {fileID: 0}
+    - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
+      propertyPath: loop
+      value: 
+      objectReference: {fileID: 636124253}
     - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
       propertyPath: dropBubble
       value: 
@@ -1542,6 +1558,10 @@ PrefabInstance:
       value: Bubble3
       objectReference: {fileID: 0}
     - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
+      propertyPath: loop
+      value: 
+      objectReference: {fileID: 636124253}
+    - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
       propertyPath: dropBubble
       value: 
       objectReference: {fileID: 69867316}
@@ -1809,7 +1829,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 44b0878570a27c64aa3f018160a4ee42, type: 3}
   manga: {fileID: 1328916358}
   bubbleContainer: {fileID: 885172472}
-  seconds: 0
   lastRand: 
   clock: {fileID: 1080704205}
   music: {fileID: 520995576}
@@ -1906,6 +1925,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bubble9
       objectReference: {fileID: 0}
+    - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
+      propertyPath: loop
+      value: 
+      objectReference: {fileID: 636124253}
     - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
       propertyPath: dropBubble
       value: 
@@ -2242,6 +2265,10 @@ PrefabInstance:
       value: Bubble8
       objectReference: {fileID: 0}
     - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
+      propertyPath: loop
+      value: 
+      objectReference: {fileID: 636124253}
+    - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
       propertyPath: dropBubble
       value: 
       objectReference: {fileID: 69867316}
@@ -2492,6 +2519,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bubble4
       objectReference: {fileID: 0}
+    - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
+      propertyPath: loop
+      value: 
+      objectReference: {fileID: 636124253}
     - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
       propertyPath: dropBubble
       value: 
@@ -2935,6 +2966,10 @@ PrefabInstance:
       value: Bubble2
       objectReference: {fileID: 0}
     - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
+      propertyPath: loop
+      value: 
+      objectReference: {fileID: 636124253}
+    - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
       propertyPath: dropBubble
       value: 
       objectReference: {fileID: 69867316}
@@ -3165,6 +3200,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bubble7
       objectReference: {fileID: 0}
+    - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
+      propertyPath: loop
+      value: 
+      objectReference: {fileID: 636124253}
     - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
       propertyPath: dropBubble
       value: 
@@ -3662,6 +3701,10 @@ PrefabInstance:
       value: Bubble5
       objectReference: {fileID: 0}
     - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
+      propertyPath: loop
+      value: 
+      objectReference: {fileID: 636124253}
+    - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
       propertyPath: dropBubble
       value: 
       objectReference: {fileID: 69867316}
@@ -3774,6 +3817,10 @@ PrefabInstance:
       value: Bubble11
       objectReference: {fileID: 0}
     - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
+      propertyPath: loop
+      value: 
+      objectReference: {fileID: 636124253}
+    - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
       propertyPath: dropBubble
       value: 
       objectReference: {fileID: 69867316}
@@ -3882,6 +3929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bubble15
       objectReference: {fileID: 0}
+    - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
+      propertyPath: loop
+      value: 
+      objectReference: {fileID: 636124253}
     - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
       propertyPath: dropBubble
       value: 
@@ -4024,6 +4075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bubble10
       objectReference: {fileID: 0}
+    - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
+      propertyPath: loop
+      value: 
+      objectReference: {fileID: 636124253}
     - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
       propertyPath: dropBubble
       value: 
@@ -4193,6 +4248,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bubble1
       objectReference: {fileID: 0}
+    - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
+      propertyPath: loop
+      value: 
+      objectReference: {fileID: 636124253}
     - target: {fileID: 3173640125922020720, guid: 696fbac0f24a3d64bb14f0aa3a7ca61c, type: 3}
       propertyPath: dropBubble
       value: 

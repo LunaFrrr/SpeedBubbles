@@ -28,6 +28,7 @@ public class DisplayMangas : MonoBehaviour
 
     void Start()
     {
+        loop = GameObject.Find("Loop");
         lastSong = GameObject.Find("Music");
         DontDestroyOnLoad(endSound);
         AddBubbles(StickBubbles.bubblesFirstPage);

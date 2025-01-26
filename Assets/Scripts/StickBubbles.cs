@@ -40,6 +40,8 @@ public class StickBubbles : MonoBehaviour
     private GameObject lastMusic;
     private void Awake()
     {
+        nPages = 0;
+        seconds = 15;
         readBubbles = false;
         nextButton.SetActive(false);
         info.SetActive(true);
@@ -49,7 +51,8 @@ public class StickBubbles : MonoBehaviour
 
     void Start()
     {
-        seconds = 15;
+        
+        
         DontDestroyOnLoad(music);
         DontDestroyOnLoad(gameObject);
         pagesText.text = $"{nPages + 1}/3";

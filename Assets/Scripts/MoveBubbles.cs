@@ -16,8 +16,11 @@ public class MoveBubbles : MonoBehaviour, IDragHandler, IDropHandler, IPointerEn
     public AudioSource dropBubble;
     public AudioSource pickBubble;
 
+    public GameObject loop;
+
     void Start()
     {
+        loop.SetActive(true);
         originalPos = transform.position;
         canvas = GetComponentInParent<Canvas>();
         raycaster = canvas.GetComponent<GraphicRaycaster>();
