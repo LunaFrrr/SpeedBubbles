@@ -1,4 +1,4 @@
-# SpeedBubbles
+# SpeedBubble
 Juego desarrollado durante la Global Game Jam de 2025.
 
 ## Requisitos:
