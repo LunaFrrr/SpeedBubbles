@@ -7,7 +7,8 @@ public class PlayVideo : MonoBehaviour
 {
     private VideoPlayer videoPlayer;
     private GameObject music;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    public string videoURL = "https://LunaFrrr.github.io/SpeedBubble/Assets/Arte/Animaticas/animatica_ini.mp4";
     void Start()
     {
         music = GameObject.Find("MusicMenu");
@@ -15,18 +16,11 @@ public class PlayVideo : MonoBehaviour
         {
             Destroy(music);
         }
-        string videoPath = Path.Combine(Application.streamingAssetsPath, "animatica_ini.mp4");
+        //string videoPath = Path.Combine(Application.streamingAssetsPath, "animatica_ini.mp4");
 
-        if (File.Exists(videoPath))
-        {
-            videoPlayer = this.GetComponent<VideoPlayer>();
-            videoPlayer.url = videoPath;
-            videoPlayer.Play();
-        }
-        else
-        {
-            Debug.LogError("No se pudo encontrar el archivo de video: " + videoPath);
-        }
+        videoPlayer = this.GetComponent<VideoPlayer>();
+        videoPlayer.url = videoURL;
+        videoPlayer.Play();
     }
 
     // Update is called once per frame
