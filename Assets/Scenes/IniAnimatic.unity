@@ -667,7 +667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d40fcf229ad71d746aee21a2a49018eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoURL: https://drive.google.com/uc?export=download&id=1o35kpqr39NElwd4toTo_BAxjJnePxr17
+  videoURL: 
 --- !u!1 &1678385754
 GameObject:
   m_ObjectHideFlags: 0

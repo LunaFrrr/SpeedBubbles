@@ -6,21 +6,13 @@ using UnityEngine.Video;
 public class PlayVideoEnd : MonoBehaviour
 {
     private VideoPlayer videoPlayer;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private readonly string videoURL = "https://LunaFrrr.github.io/SpeedBubble/Assets/Arte/Animaticas/animatica_final.mp4";
+
     void Start()
     {
-        string videoPath = Path.Combine(Application.streamingAssetsPath, "animatica_final.mp4");
-
-        if (File.Exists(videoPath))
-        {
             videoPlayer = this.GetComponent<VideoPlayer>();
-            videoPlayer.url = videoPath;
+            videoPlayer.url = videoURL;
             videoPlayer.Play();
-        }
-        else
-        {
-            Debug.LogError("No se pudo encontrar el archivo de video: " + videoPath);
-        }
     }
 
     // Update is called once per frame

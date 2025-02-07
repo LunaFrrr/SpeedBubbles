@@ -8,7 +8,7 @@ public class PlayVideo : MonoBehaviour
     private VideoPlayer videoPlayer;
     private GameObject music;
 
-    public string videoURL = "https://LunaFrrr.github.io/SpeedBubble/Assets/Arte/Animaticas/animatica_ini.mp4";
+    private readonly string videoURL = "https://LunaFrrr.github.io/SpeedBubble/Assets/Arte/Animaticas/animatica_ini.mp4";
     void Start()
     {
         music = GameObject.Find("MusicMenu");
