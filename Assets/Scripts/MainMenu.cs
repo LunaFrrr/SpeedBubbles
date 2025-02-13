@@ -38,22 +38,11 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(PlaySoundAndLoadScene(buttonSound, "EndCredits"));
     }
 
-    public void ExitGame()
-    {
-        StartCoroutine(PlaySoundAndExit(buttonSound));
-    }
 
     private IEnumerator PlaySoundAndLoadScene(AudioSource sound, string sceneName)
     {
         sound.Play();
         yield return new WaitForSeconds(0.5f);  // Espera a que termine el sonido
         SceneManager.LoadScene(sceneName);
-    }
-
-    private IEnumerator PlaySoundAndExit(AudioSource sound)
-    {
-        sound.Play();
-        yield return new WaitForSeconds(0.5f);  // Espera a que termine el sonido
-        Application.Quit();
     }
 }
