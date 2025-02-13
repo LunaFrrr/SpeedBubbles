@@ -7,6 +7,8 @@ public class MainMenu : MonoBehaviour
     public AudioSource buttonSound;
     public AudioSource music;
 
+    TransitionManager TransitionManager;
+
     private static bool musicPlaying = false;
 
     void Awake()
@@ -15,15 +17,20 @@ public class MainMenu : MonoBehaviour
         {
             Destroy(music.gameObject);
         }
+        TransitionManager = FindFirstObjectByType<TransitionManager>();
+
     }
 
     public void PlayGame()
     {
-        StartCoroutine(PlaySoundAndLoadScene(buttonSound, "IniAnimatic"));
+        buttonSound.Play();
+        TransitionManager.LoadTransitionMenu();
+        //StartCoroutine(PlaySoundAndLoadScene(buttonSound, "IniAnimatic"));
     }
 
     public void backToMenu()
     {
+        
         SceneManager.LoadScene("MainMenu");
         StartCoroutine(PlaySoundAndLoadScene(buttonSound, "MainMenu"));
     }

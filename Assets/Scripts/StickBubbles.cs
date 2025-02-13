@@ -38,6 +38,10 @@ public class StickBubbles : MonoBehaviour
 
     private SelectStack selectStack;
     private GameObject lastMusic;
+
+    TransitionManager TransitionManager;
+
+
     private void Awake()
     {
         bubblesFirstPage.Clear();
@@ -51,6 +55,8 @@ public class StickBubbles : MonoBehaviour
         info.SetActive(true);
         InitializeBubbles();
         lastMusic = GameObject.Find("Selection");
+
+        TransitionManager = FindFirstObjectByType<TransitionManager>();
     }
 
     void Start()
@@ -204,7 +210,8 @@ public class StickBubbles : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("ShowMangas");
+            TransitionManager.LoadTransition();
+            //SceneManager.LoadScene("ShowMangas");
         }
     }
 

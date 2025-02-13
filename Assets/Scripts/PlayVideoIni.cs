@@ -8,6 +8,8 @@ public class PlayVideo : MonoBehaviour
     private VideoPlayer videoPlayer;
     private GameObject music;
 
+    TransitionManager TransitionManager;
+
     private readonly string videoURL = "https://LunaFrrr.github.io/SpeedBubble/Assets/Arte/Animaticas/animatica_ini.mp4";
     void Start()
     {
@@ -21,6 +23,8 @@ public class PlayVideo : MonoBehaviour
         videoPlayer = this.GetComponent<VideoPlayer>();
         videoPlayer.url = videoURL;
         videoPlayer.Play();
+
+        TransitionManager = FindFirstObjectByType<TransitionManager>();
     }
 
     // Update is called once per frame
@@ -28,12 +32,15 @@ public class PlayVideo : MonoBehaviour
     {
         if (videoPlayer.isPaused)
         {
-            NextScene();
+
+            //NextScene();
+            TransitionManager.LoadTransition();
         }
     }
 
     public void NextScene()
     {
-        SceneManager.LoadScene("MenuBubbleSelection");
+        TransitionManager.LoadTransition();
+        //SceneManager.LoadScene("MenuBubbleSelection");
     }
 }

@@ -20,10 +20,14 @@ public class DisplayMangas : MonoBehaviour
     private GameObject loop;
     private GameObject selection;
 
+    TransitionManager TransitionManager;
+
 
     private void Awake()
     {
         page.GetComponent<Image>().sprite = StickBubbles.randomPages[nPage];
+
+        TransitionManager = FindFirstObjectByType<TransitionManager>();
     }
 
 
@@ -83,7 +87,9 @@ public class DisplayMangas : MonoBehaviour
             Destroy(loop);
             Destroy(lastSong);
             Destroy(selection);
-            StartCoroutine(PlaySoundAndLoadScene(endSound, "EndAnimatic"));
+            endSound.Play();
+            TransitionManager.LoadTransition();
+            //StartCoroutine(PlaySoundAndLoadScene(endSound, "EndAnimatic"));
         }
         else
         {
@@ -135,11 +141,11 @@ public class DisplayMangas : MonoBehaviour
 
     }
 
-    private IEnumerator PlaySoundAndLoadScene(AudioSource sound, string sceneName)
-    {
-        sound.Play();
-        yield return new WaitForSeconds(0.7f);  // Espera a que termine el sonido
-        SceneManager.LoadScene(sceneName);
-    }
+    //private IEnumerator PlaySoundAndLoadScene(AudioSource sound, string sceneName)
+    //{
+    //    sound.Play();
+    //    yield return new WaitForSeconds(0.7f);  // Espera a que termine el sonido
+    //    SceneManager.LoadScene(sceneName);
+    //}
 
 }
