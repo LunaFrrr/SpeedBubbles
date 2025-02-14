@@ -9,7 +9,7 @@ public class MaintainPos : MonoBehaviour
     public GameObject parent;
     void Start()
     {
-        posOriginal = Vector3.zero;
+        posOriginal = new Vector3(-1500,-500,0);
 
         
     }
@@ -28,7 +28,7 @@ public class MaintainPos : MonoBehaviour
         else
         {
             newPos = new Vector3(offSet.x, offSet.y, 0f);
-            transform.position = parent.transform.position-newPos;
+            transform.position = parent.transform.position - newPos;
         }
 
 
