@@ -7,13 +7,16 @@ public class SelectStack : MonoBehaviour
 {
     public static List<Sprite> selectedSprites = new List<Sprite>();
     private int numBubbles = 15;
-    public string folderName = "Bubbles"; 
+    public string folderName = "Bubbles";
+
+    TransitionManager TransitionManager;
 
     private void Awake()
     {
         Sprite[] sprites = Resources.LoadAll<Sprite>(folderName);
         selectedSprites = GetRandomSprites(sprites, numBubbles);
         DontDestroyOnLoad(this);
+        TransitionManager = FindFirstObjectByType<TransitionManager>();
     }
 
     private List<Sprite> GetRandomSprites(Sprite[] sprites, int count)
@@ -35,6 +38,7 @@ public class SelectStack : MonoBehaviour
 
     public void NextScene()
     {
-        SceneManager.LoadScene("StickBubblesManga");
+        TransitionManager.LoadTransition();
+        //SceneManager.LoadScene("StickBubblesManga");
     }
 }
