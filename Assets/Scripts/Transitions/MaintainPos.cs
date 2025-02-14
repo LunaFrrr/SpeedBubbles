@@ -9,7 +9,7 @@ public class MaintainPos : MonoBehaviour
     public GameObject parent;
     void Start()
     {
-        posOriginal = new Vector3(-1500,-500,0);
+        posOriginal = new Vector3(-1000,-400,0);
 
         
     }
