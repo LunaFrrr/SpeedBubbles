@@ -23,13 +23,13 @@ public class PlayVideoEnd : MonoBehaviour
         if (videoPlayer.isPaused)
         {
             //NextScene();
-            TransitionManager.LoadTransition();
+            TransitionManager.LoadTransition(null);
         }
     }
 
     public void NextScene()
     {
         //SceneManager.LoadScene("MainMenu");
-        TransitionManager.LoadTransition();
+        TransitionManager.LoadTransition(null);
     }
 }

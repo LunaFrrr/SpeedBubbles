@@ -38,6 +38,7 @@ public class StickBubbles : MonoBehaviour
 
     private SelectStack selectStack;
     private GameObject lastMusic;
+    private bool fadeMusic;
 
     TransitionManager TransitionManager;
 
@@ -47,7 +48,7 @@ public class StickBubbles : MonoBehaviour
         bubblesFirstPage.Clear();
         bubblesSecondPage.Clear();
         bubblesThirdPage.Clear();
-
+        fadeMusic = false;
         nPages = 0;
         seconds = 15;
         readBubbles = false;
@@ -61,14 +62,11 @@ public class StickBubbles : MonoBehaviour
 
     void Start()
     {
-        
-        
         DontDestroyOnLoad(music);
         DontDestroyOnLoad(gameObject);
         pagesText.text = $"{nPages + 1}/3";
         if(timerText != null)
         {
-            Debug.Log("ENTRAAAA");
             timerText.text = $"0:{seconds}";
             manga.GetComponent<Image>().sprite = randomPages[nPages];
         }
@@ -96,6 +94,10 @@ public class StickBubbles : MonoBehaviour
             {
                 clock.Pause();
             }
+            if(!fadeMusic && seconds <= 0.5f)
+            {
+                StartCoroutine(TransitionManager.FadeOut(lastMusic.GetComponent<AudioSource>(), 0.5f));
+            }
             Countdown();
         }
 
@@ -108,7 +110,6 @@ public class StickBubbles : MonoBehaviour
 
     private void Countdown()
     {
-
         if (seconds > 0)
         {
             seconds -= Time.deltaTime;
@@ -121,7 +122,7 @@ public class StickBubbles : MonoBehaviour
                 {
                     audioSource.Pause();
                 }
-                    music.Play();
+                StartCoroutine(TransitionManager.FadeIn(music, 1));
             }
         }
         else
@@ -210,7 +211,7 @@ public class StickBubbles : MonoBehaviour
         }
         else
         {
-            TransitionManager.LoadTransition();
+            TransitionManager.LoadTransition(null);
             //SceneManager.LoadScene("ShowMangas");
         }
     }

@@ -38,7 +38,7 @@ public class SelectStack : MonoBehaviour
 
     public void NextScene()
     {
-        TransitionManager.LoadTransition();
+        TransitionManager.LoadTransition(null);
         //SceneManager.LoadScene("StickBubblesManga");
     }
 }

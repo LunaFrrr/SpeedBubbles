@@ -4,22 +4,21 @@ using UnityEngine.SceneManagement;
 
 public class TransitionManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Animator transition;
     public float transitionTime = 1f;
 
-    void Start()
+    public void LoadTransition(AudioSource music)
     {
-
-    }
-
-    public void LoadTransition()
-    {
+        if (music != null)
+        {
+            StartCoroutine(FadeOut(music, 1));
+        }
         StartCoroutine(Transition(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
-    public void LoadTransitionMenu()
+    public void LoadTransitionMenu(AudioSource music)
     {
+        StartCoroutine(FadeOut(music, 1));
         StartCoroutine(Transition(2));
     }
 
@@ -31,5 +30,34 @@ public class TransitionManager : MonoBehaviour
         if (sceneIndex > 6) sceneIndex = 0;
         SceneManager.LoadScene(sceneIndex);
 
+    }
+
+    public static IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
+    {
+        float startVolume = audioSource.volume;
+
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+
+            yield return null;
+        }
+
+        audioSource.Stop();
+        audioSource.volume = startVolume;
+    }
+
+    public static IEnumerator FadeIn(AudioSource audioSource, float FadeTime)
+    {
+        audioSource.Play();
+        float startVolume = audioSource.volume;
+        while (audioSource.volume < 1)
+        {
+            audioSource.volume += startVolume * Time.deltaTime / FadeTime;
+
+            yield return null;
+        }
+
+        audioSource.volume = startVolume;
     }
 }

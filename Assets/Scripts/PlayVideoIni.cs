@@ -34,13 +34,13 @@ public class PlayVideo : MonoBehaviour
         {
 
             //NextScene();
-            TransitionManager.LoadTransition();
+            TransitionManager.LoadTransition(music.GetComponent<AudioSource>());
         }
     }
 
     public void NextScene()
     {
-        TransitionManager.LoadTransition();
+        TransitionManager.LoadTransition(null);
         //SceneManager.LoadScene("MenuBubbleSelection");
     }
 }

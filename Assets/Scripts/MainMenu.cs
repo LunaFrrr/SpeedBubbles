@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         buttonSound.Play();
-        TransitionManager.LoadTransitionMenu();
+        TransitionManager.LoadTransitionMenu(music);
         //StartCoroutine(PlaySoundAndLoadScene(buttonSound, "IniAnimatic"));
     }
 
